@@ -1,0 +1,114 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.popup {
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .fog {
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .popup-body {
+        background-color: $light-grey6;
+        margin-left: -300px;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        width: 600px;
+        form {
+            padding: 0 130px;
+            text-align: center;
+            .field {
+                position: relative;
+                padding: 0 0 45px 0;
+                label.error {
+                    right: 17px;
+                    bottom: 20px;
+                }
+                &.forgot-link {
+                    padding-bottom: 25px;
+                }
+            }
+            .default-input {
+
+            }
+            .default-btn {
+                padding-left: 75px;
+                padding-right: 75px;
+                position: relative;
+                margin: 30px 0 50px 0;
+                height: 62px;
+            }
+            .message-box {
+                font-size: 14px;
+                font-weight: 700;
+                padding-bottom: 25px;
+                text-transform: uppercase;
+            }
+            .spinner {
+                position: absolute;
+                top: 17px;
+                right: 25px;
+                height: 23px;
+                width: 23px;
+            }
+        }
+    }
+
+    .popup-title {
+        font-size: 48px;
+        font-weight: bold;
+        padding: 70px 0 40px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .popup-close {
+        cursor: pointer;
+        color: $light-grey7;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        &:hover {
+            color: $light-grey1;
+        }
+    }
+
+    .popup-additional {
+        background-color: $white;
+        padding: 40px 100px 50px;
+        text-align: center;
+        a {
+            color: $blue-green;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            &:hover {
+                color: $blue;
+            }
+        }
+        .default-text {
+            font-size: 14px;
+            padding: 20px 0 0 0;
+        }
+    }
+}
+
+.inner-page .popup .popup-body {
+    top: 108px;
+}
+
+.popup_show {
+  display: block;
+}

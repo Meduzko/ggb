@@ -1,0 +1,416 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.project-description {
+    margin: 0 auto;
+    width: 1260px;
+
+    .inner-page-main-title {
+        padding: 0 20% 36px;
+    }
+
+    .default-text {
+        padding: 0 30%;
+        text-align: center;
+    }
+
+    .project-amount {
+        color: $blue;
+        font-size: 120px;
+        font-weight: 100;
+        text-align: center;
+        sup {
+            font-size: 63px;
+            vertical-align: top;
+        }
+    }
+
+    .separator-with-icon {
+        margin-top: 42px;
+        div {
+            top: 10px;
+            span {
+                background: url('/images/marker.png') no-repeat;
+                display: block;
+                height: 65px;
+                margin-left: -4px;
+                padding: 13px 0 0 12px;
+                width: 102px;
+                i {
+                    background-repeat: no-repeat;
+                    display: block;
+                    height: 23px;
+                    width: 25px;
+                    &.sun-icon {
+                        background-image: url('/images/sun_icon.png');
+                    }
+                    &.wind-icon {
+                        background-image: url('/images/wind_icon.png');
+                        background-position: 2px 0;
+                    }
+                    &.bio-icon {
+                        background-image: url('/images/bio_icon.png');
+                        background-position: 5px 0;
+                    }
+                }
+            }
+        }
+        hr {
+            margin: -22px 0 42px !important;
+        }
+    }
+
+    .project-location {
+        color: $light-grey1;
+        font-size: 12px;
+        padding: 5px 0 26px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .statistic-circles {
+        background: url('/images/map_bg_transparent.png') no-repeat 50% 10px;
+        padding-bottom: 90px;
+        text-align: center;
+        background-size: 50%;
+    }
+
+    .project-description-content {
+        .project-description-content-row {
+            overflow: hidden;
+            border-top: 1px solid $light-grey2;
+            text-align: center;
+            > div {
+                float: left;
+                vertical-align: top;
+                //width: 632px;
+                width: 50%;
+                h5 {
+                    padding-bottom: 40px;
+                }
+                p {
+                    color: $light-grey1;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+                ul {
+                    li {
+                        background: url('/images/list_dot.png') no-repeat 2px 3px;
+                        color: $light-grey1;
+                        font-size: 18px;
+                        line-height: 21px;
+                        list-style-type: none;
+                        padding: 0 0 22px 30px;
+                    }
+                }
+                &:first-child {
+                    //width: 628px;
+                }
+                &:last-child {
+                    font-size: 0;
+                }
+
+            }
+
+            &:nth-child(even) {
+                > div:first-child {
+                    float: right;
+                }
+            }
+            .block-with-text {
+                padding: 50px;
+                text-align: left;
+            }
+        }
+    }
+
+    .grid {
+        table {
+            tr {
+                td:first-child {
+                    width: 25%;
+                }
+
+            }
+        }
+    }
+
+    .project-controls {
+        padding-top: 85px;
+        text-align: center;
+
+        .default-btn {
+            margin-top: -15px;
+            padding: 22px 120px;
+        }
+    }
+
+    .participation-popup {
+        .default-text {
+            text-align: center;
+        }
+        .participations-table {
+            margin: 0 auto;
+            width: 100%;
+        }
+        table {
+            th {
+                border-top: 0;
+                font-weight: normal;
+                font-size: 14px;
+                text-align: left;
+                text-transform: uppercase;
+                padding: 20px 0 30px 35px;
+            }
+            td {
+                border-top: 1px solid $light-grey2;
+                border-bottom: 1px solid $light-grey2;
+                padding: 15px 0 15px 35px;
+                font-size: 16px;
+                span {
+                    color: $light-grey1;
+                }
+                input {
+                    font-size: 20px;
+                    padding: 10px 19px;
+                    width: 80px;
+                }
+            }
+        }
+        .default-input {
+            margin: 0;
+            width: 70px;
+        }
+        .actions {
+            text-align: center;
+            .default-btn {
+                padding-left: 120px;
+                padding-right: 120px;
+                height: auto;
+            }
+        }
+        .popup-body form {
+            padding: 0 50px;
+        }
+
+        .grid-container {
+            overflow: visible;
+        }
+
+        .count-wrapper {
+            position: relative;
+            label.error {
+                right: auto;
+                bottom: 0;
+                top: 75px;
+                width: 350px;
+                left: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .participation-confirm-popup {
+        .actions {
+            .default-btn {
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+        }
+        .additional-actions {
+            overflow: hidden;
+            padding: 20px;
+            .get-back a {
+                &:before {
+                    padding-right: 15px;
+                }
+            }
+            .get-pdf a {
+                line-height: 26px;
+                margin-top: 4px;
+                &:before {
+                    font-size: 20px;
+                    left: -28px;
+                    top: 5px;
+                }
+            }
+        }
+        .section-to-print {
+            div {
+                padding: 0 50px;
+            }
+            .name {
+                border-top: 1px solid $light-grey2;
+                font-size: 22px;
+                font-weight: 700;
+                padding-top: 25px;
+                text-transform: uppercase;
+            }
+            .address {
+                border-bottom: 1px solid $light-grey2;
+                color: $light-grey1;
+                font-size: 14px;
+                padding: 10px 0 25px 0;
+            }
+            .amount {
+                color: $light-grey1;
+                font-size: 18px;
+                line-height: 26px;
+                padding: 20px 50px;
+                strong {
+                    color: $grey;
+                }
+                span {
+                    color: $blue;
+                    font-weight: 700;
+                }
+            }
+            .info {
+                color: $light-grey1;
+                font-size: 14px;
+                line-height: 18px;
+                padding: 30px 50px 20px 50px;
+                span {
+                    color: $grey;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .participation-thanks-popup {
+        form {
+            text-align: left;
+        }
+        p {
+            color: $light-grey1;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 15px 10px;
+            strong {
+                color: $grey;
+            }
+        }
+        span {
+            color: $light-grey1;
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 15px 10px;
+            strong {
+                color: $grey;
+            }
+        }
+        i {
+            color: $blue;
+            font-style: normal;
+        }
+        .generated-number {
+            border-top: 1px solid $light-grey2;
+            border-bottom: 1px solid $light-grey2;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 25px 0;
+            padding: 25px 0;
+            text-align: center;
+        }
+        .additional-actions {
+            overflow: hidden;
+            padding: 20px;
+            .get-pdf a {
+                line-height: 26px;
+                margin-top: 4px;
+                &:before {
+                    font-size: 20px;
+                    left: -28px;
+                    top: -1px;
+                }
+            }
+        }
+    }
+
+    .project-controls {
+        table {
+            width: 100%;
+            td {
+                width: 33%;
+            }
+        }
+
+    }
+
+    .get-back {
+        display: inline-block;
+        float: left;
+        min-height: 1px;
+        a {
+            cursor: pointer;
+            display: inline-block;
+            float: left;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            text-transform: uppercase;
+            &:before {
+                color: $grey;
+                font-size: 26px;
+                position: relative;
+                top: 4px;
+                padding-right: 32px;
+            }
+        }
+    }
+
+    .get-pdf {
+        display: inline-block;
+        float: right;
+        min-height: 1px;
+        a {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            font-weight: bold;
+            position: relative;
+            text-align: left;
+            text-transform: uppercase;
+            span {
+                color: $light-grey1;
+                display: block;
+                font-size: 14px;
+                font-weight: normal;
+                padding-bottom: 2px;
+                text-transform: lowercase;
+            }
+            &:before {
+                color: $grey;
+                font-size: 32px;
+                font-weight: 100;
+                position: absolute;
+                left: -45px;
+                top: -2px;
+            }
+        }
+
+    }
+
+}
+
+@media all and (max-width: 768px) {
+    .project-description {
+        .project-controls {
+            .get-pdf {
+                display: block;
+                float: none;
+                margin: 0 0 0 20px;
+            }
+        }
+        .project-amount {
+            font-size: 70px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.statistic-circles {
+    padding: 109px 0 273px 0;
+    li {
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.8);
+        display: inline-block;
+        @include border-radius(95px);
+        @include box-shadow(0, 0, 24px, rgba(0, 0, 0, 0.15));
+        height: 182px;
+        margin: 0 24px 12px;
+        padding: 6px 0 0 7px;
+        text-align: center;
+        width: 182px;
+        div {
+            background: url('/images/svg/gradient.svg') no-repeat -333px -211px;
+            display: table-cell;
+            font-size: 30px;
+            font-weight: 700;
+            height: 175px;
+            vertical-align: middle;
+            width: 175px;
+            em {
+                font-size: 18px;
+                font-style: normal;
+            }
+            sup {
+                font-size: 22px;
+                vertical-align: top;
+            }
+            span {
+                display: block;
+                color: $blue-green;
+                font-size: 14px;
+                font-weight: 500;
+                padding-top: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

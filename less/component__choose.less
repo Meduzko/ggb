@@ -1,0 +1,93 @@
+/* c-choose
+------------------------------------------------------------------- */
+.c-choose {
+    .var () { @root: ~'.c-choose'; }.var;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 0 0 1px @color-7;
+
+    @media @min-768 {
+        height: 300px;
+        padding: 16px;
+    }
+
+    &__wrap {
+        overflow: hidden;
+    }
+
+    &__title {
+        color: @color-8;
+        font-size: 30px;
+        font-weight: 100;
+
+        @media @min-768 {
+            font-size: 40px;
+        }
+    }
+
+    &__text {
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 300;
+        max-width: 280px;
+
+        @media @min-768 {
+            margin: 16px 0;
+            font-size: 14px;
+        }
+    }
+
+    &--1 {
+        background: @color-1 url(../img/8.png) 50% 50% no-repeat;
+    }
+
+    &--2 {
+        background: @color-1 url(../img/9.png) 50% 50% no-repeat;
+    }
+
+    &--3 {
+        background: @color-1 url(../img/10.png) 50% 50% no-repeat;
+    }
+
+    &--4 {
+        background: @color-1 url(../img/11.png) 50% 50% no-repeat;
+    }
+
+    &--5 {
+        background: @color-1 url(../img/12.png) 50% 50% no-repeat;
+    }
+
+    &--6 {
+        background: @color-1 url(../img/13.png) 50% 50% no-repeat;
+    }
+
+    &--hide {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .center-absolute();
+        padding: 26px;
+        color: @color-1;
+        text-align: center;
+        background: @color-8;
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        transition: all .3s ease-in-out;
+
+        @{root}__title {
+            color: @color-1;
+        }
+    }
+
+    &:hover @{root}--hide {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+}

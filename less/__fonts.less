@@ -1,0 +1,79 @@
+/* fonts
+------------------------------------------------------------------- */
+* {
+    font-family: 'Museo', sans-serif;
+}
+
+.include-font {
+    .var () { @root: ~'../fonts/Museo'; }.var;
+
+    @font-face {
+        font-weight: 100;
+        font-style: normal;
+        font-family: 'Museo';
+        src: url('@{root}/100.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 100;
+        font-style: italic;
+        font-family: 'Museo';
+        src: url('@{root}/100-italic.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 300;
+        font-style: normal;
+        font-family: 'Museo';
+        src: url('@{root}/300.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'Museo';
+        src: url('@{root}/300-italic.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 500;
+        font-style: normal;
+        font-family: 'Museo';
+        src: url('@{root}/500.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 500;
+        font-style: italic;
+        font-family: 'Museo';
+        src: url('@{root}/500-italic.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 700;
+        font-style: normal;
+        font-family: 'Museo';
+        src: url('@{root}/700.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 700;
+        font-style: italic;
+        font-family: 'Museo';
+        src: url('@{root}/700-italic.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 900;
+        font-style: normal;
+        font-family: 'Museo';
+        src: url('@{root}/900.woff') format('woff');
+    }
+
+    @font-face {
+        font-weight: 900;
+        font-style: italic;
+        font-family: 'Museo';
+        src: url('@{root}/900-italic.woff') format('woff');
+    }
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Segment</title>
+    <meta name="keywords" content="Golbal Green Buildings Segment Page">
+    <meta name="description" content="Choose the segment in wich you operate">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="all" href="css/iconselect.css" />
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+</head>
+<body class="body flex flex--column">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icon--radio" viewBox="0 0 512 512">
+            <circle cx="256" cy="256" r="256"></circle>
+        </symbol>
+
+        <symbol id="icon--checkbox" viewBox="0 0 512 512">
+            <path d="M192.3 439L0 246.8l48.4-48.4 144.1 144.2L463.9 73l48.1 48.5"></path>
+        </symbol>
+
+        <symbol id="icon--close" viewBox="0 0 512 512">
+            <path d="M301.3 256L502.6 54.7c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 210.7 54.7 9.4C42.1-3.1 21.9-3.1 9.4 9.4s-12.5 32.8 0 45.3L210.7 256 9.4 457.3c-12.5 12.5-12.5 32.8 0 45.3 6.3 6.2 14.5 9.4 22.6 9.4s16.4-3.1 22.6-9.4L256 301.3l201.3 201.3c6.3 6.3 14.5 9.4 22.6 9.4 8.2 0 16.4-3.1 22.6-9.4 12.5-12.5 12.5-32.8 0-45.3L301.3 256z"></path>
+        </symbol>
+
+    </svg>
+
+
+    <header class="header">
+    <div class="header_block">
+    <nav>
+        <div class="header_icons">
+            <div class="mob_menu" id="menu_control">
+                <img src="img/menu_icon.png" id="menu_img" onclick="change()">
+            </div>
+            <div class="buildngs_menu" id="menu_control_2">
+                <img src="img/Buildings_icons_2.png" id="buildings_img" alt="mobile buildings-icon">
+                <a class="buildings_text">my building</a> 
+            </div>
+        </div>
+
+        <div class="div-site-links">    
+            <ul class="site-links" id="site-links">
+              <li class="header-menu-li"><a class="header-menu-a" href="idea.html">IDEA</a></li>
+              <li class="header-menu-li"><a class="header-menu-a" href="index.html#service_carousel">services</a></li>
+              <li class="header-menu-li"><a class="header-menu-a" href="about.html">ABOUT</a></li>
+              <li class="header-menu-li"><a class="header-menu-a" href="contact.html">CONTACT</a></li>
+          </ul>
+        <!--    <span class="menu_control icon-menu menu-control"  value="View_menu" href="#" id="menu_control" ></span>
+                <span class="menu_control_2 icon-user  auth-menu-control"  value="View_login" href="#" id="menu_control_2"></span>
+            -->
+        </div>
+        <div class="my_buildings">
+            <ul class="auth-links" id="menu_control-auth" >
+                <li class="login-link"><a onclick="open_popup()" class="header-menu-login-a" >my building</a></li>      
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div class="logo">
+      <a href="index.html"></a>
+       <!-- <object data="img/1.png"  type="image/png+xml">
+            <img class="logo_img" src="img/GGB.svg" />
+        </object> -->
+        <span><i></i></span>
+    </div>
+</header>
+
+
+<main class="main main--bg flex--height">
+    <div class="segment_carousel">
+        <div class="c-carousel c-carousel__info c-carousel__second_page" id="carousel_full">
+            <div class="c-carousel__info--item" id="Offices_s">
+                <div class="c-carousel__info--title" id="Offices_s--title">Offices</div>
+                <div class="c-carousel__info--text">Both tenants and owner can push towards a more efficient building</div>
+            </div>
+            <div class="c-carousel__info--item" id="Retail_s">
+                <div class="c-carousel__info--title" id="Retail_s--title">Retail</div>
+                <div class="c-carousel__info--text">Open for energy reduction, let us find out if we can help</div>
+            </div>
+            <div class="c-carousel__info--item" id="Hospitality_s">
+                <div class="c-carousel__info--title" id="Hospitality_s--title">Hospitality</div>
+                <div class="c-carousel__info--text">Largest savings can be achieved due to 24/7 use of electricity</div>
+            </div>
+            <div class="c-carousel__info--item" id="Industry_s">
+                <div class="c-carousel__info--title" id="Industry_s--title">Industry</div>
+                <div class="c-carousel__info--text">Save and increase the lifespan of your equipment</div>
+            </div>
+            <div class="c-carousel__info--item" id="Data_centers_s">
+                <div class="c-carousel__info--title" id="Data_centers_s--title">Data centres</div>
+                <div class="c-carousel__info--text">Our advanced monitoring, analytics and reporting systems provide you with an accurate, real-time insight on every facet of your energy consumption</div>
+            </div>
+            <div class="c-carousel__info--item" id="Other_s">
+                <div class="c-carousel__info--title"  id="Other_s--title">Other</div>
+                <div class="c-carousel__info--text">We are open to find out how we can help reduce your electricity consumption</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="l-section"></div>
+    <div class="l-grid"> </div>
+
+
+
+
+
+    <div class="l-section">
+        <div class="l-grid l-grid--no-padding">
+            <div class="l-row">
+                <div class="l-col min-0--12">
+                    <div class="c-block c-block--row">
+                        <div class="c-block__img"><img src="img/7.png" alt="image"></div>
+                        <div class="c-block__info">
+                            <div class="c-block__title">Monitor</div>
+                            <div class="c-block__text" id="Retail">A first step in the process of making your building more efficient is collecting data of the current situation. We therefore work with one of the worlds most advanced monitoring systems developed by Jabil. The system generates real time info on your energy usage on device level as well as the power quality that is delivered to you by the utility company.</div>
+                        </div>
+                        <div class="c-block__statistics">
+                            <div class="c-list c-list--red">
+                                <div class="c-list__item">energy usage</div>
+                                <div class="c-list__item">air quality</div>
+                                <div class="c-list__item">real time insights</div>
+                            </div>
+                            <div class="c-block__graph">
+                                <img src="img/21.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-col min-0--12">
+                    <div class="c-block c-block--row">
+                        <div class="c-block__img"><img src="img/6.png" alt="image"></div>
+                        <div class="c-block__info">
+                            <div class="c-block__title">Identify</div>
+                            <div class="c-block__text">The obtained data will be analysed and benchmarked in order to see how and to what extent our services can provide a solution. The analysis first lead to quick wins, followed by a recommendation report with possible solutions and their expected savings. This is the foundation for choosing the optimal implementation process.</div>
+                        </div>
+                        <div class="c-block__statistics">
+                            <div class="c-list c-list--yellow">
+                                <div class="c-list__item">quick wins  <span class="c-list__span">(6%)</span></div>
+                                <div class="c-list__item">improved default settings  <span class="c-list__span">(8%)</span></div>
+                                <div class="c-list__item">maintenance predictions  <span class="c-list__span">(8%)</span></div>
+                            </div>
+                            <div class="c-block__graph">
+                                <img src="img/26.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-col min-0--12">
+                    <div class="c-block c-block--row">
+                        <div class="c-block__img"><img src="img/5.png" alt="image"></div>
+                        <div class="c-block__info">
+                            <div class="c-block__title">Implement</div>
+                            <div class="c-block__text">In consultation with our clients we plan the implementation of our solutions. With our flexible offering we make it possible to firstly get acquainted with the products before deciding on purchasing or leasing. We offer a shared savings model in which all stakeholders benefit. This way we make your building more efficient while financial savings are achieved.</div>
+                        </div>
+                        <div class="c-block__statistics">
+                            <div class="c-list c-list--pale-green">
+                                <div class="c-list__item">voltage optimisation <span class="c-list__span">(8%) </span></div>
+                                <div class="c-list__item">battery technologies  <span class="c-list__span">(6%)</span></div>
+                            </div>
+                            <div class="c-block__graph">
+                                <img src="img/30.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-col min-0--12">
+                    <div class="c-block c-block--row">
+                        <div class="c-block__img"><img src="img/4.png" alt="image"></div>
+                        <div class="c-block__info">
+                            <div class="c-block__title">Validate</div>
+                            <div class="c-block__text">We work with a guaranteed saving model. This means that if lower savings are achieved, our share of the savings will decrease. This way you are ensured of guaranteed savings. After verifying the savings we continuously seek for other solutions to optimise your building(s).</div>
+                        </div>
+                        <div class="c-block__statistics">
+                            <div class="c-list c-list--green">
+                                <div class="c-list__item">lower costs</div>
+                                <div class="c-list__item">lower energy usage</div>
+                                <div class="c-list__item">machine learning</div>
+                            </div>
+                            <div class="c-block__graph">
+                                <img src="img/33.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-grid">
+        <div class="min-0--12 text--center">
+            <a class="c-button c-button--more" href="#c-modal__more"><span id="more_info_button" class="c-button__inner">More info</span></a>
+        </div>
+    </div>
+
+
+    <div class="l-section">
+        <div class="l-grid">
+            <div class="c-title--section"><span class="c-title--section__span">Example</span></div>
+            <div class="c-example">
+                <div class="c-example__item">
+                    <div class="c-example__img"><img src="img/34.png" alt="image"></div>
+                    <div class="c-example__info">
+                        <div class="c-example__title">Agree to monitor</div>
+                        <div class="c-example__text">During a brief introduction we explain our approach and align expectations. Together we decide what solutions are of interest for you, and from there we decide when to install the monitoring equipment</div>
+                    </div>
+                </div>
+                <div class="c-example__item">
+                    <div class="c-example__img"><img src="img/35.png" alt="image"></div>
+                    <div class="c-example__info">
+                        <div class="c-example__title">Collecting data</div>
+                        <div class="c-example__text">When all relevant information is received, we analyse and structure it so we can make assumptions on the savings that can be achieved with our range of solutions</div>
+                    </div>
+                </div>
+                <div class="c-example__item">
+                    <div class="c-example__img"><img src="img/36.png" alt="image"></div>
+                    <div class="c-example__info">
+                        <div class="c-example__title">Presentation of our findings</div>
+                        <div class="c-example__text">We explain what the outcomes of the data collection is and display the solutions that are available to increase the performance of your buildings. We also present a financial model / payback period and a visualisation of how it can be implemented, additionally we will present a guaranteed savings model</div>
+                    </div>
+                </div>
+                <div class="c-example__item">
+                    <div class="c-example__img"><img src="img/37.png" alt="image"></div>
+                    <div class="c-example__info">
+                        <div class="c-example__title">Install the solutions</div>
+                        <div class="c-example__text">After agreeing on how we are going to improve your building’s performance, we implement the solutions</div>
+                    </div>
+                </div>
+                <div class="c-example__item c-example__item--last">
+                    <div class="c-example__img"><img src="img/38.png" alt="image"></div>
+                    <div class="c-example__info">
+                        <div class="c-example__title">Verify and control results</div>
+                        <div class="c-example__text">In order to see if we have reached our targets we compare our findings with our first analyses and present the final results in a meeting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="min-0--12 text_align-center">
+        <a id="a_appointment_button" class="c-button c-button--more" onclick="open_modal();"><span id="span_appointment_button" class="c-button__inner">MAKE APPOINTMENT</span></a>
+    </div>
+
+                <div class="appointment_container">
+                    <div class="appoitment_popup_back" id="popup_back"></div> 
+<div class="pop_container" id="appointment_popup">
+    <form method="POST">
+        <div class="appoitment_popup-content">
+            <div class="close_img icon-font icon-cancel" id="close_popup" onclick="close_modal();"></div>
+            <div class="appoitment_popup-title">
+                make appointment
+            </div>
+                <div class="inputs_container"> 
+            <div class="appoitment_popup-form" id="appoitment_popup_f-1">
+                <div class="appoitment_popup-input_title"> Name</div>
+                <input class="appoitment_popup-input " type="text" name="user[name]" id="appointment_name">
+            </div>
+            <div class="appoitment_popup-form" id="appoitment_popup_f-2">
+                <div class="appoitment_popup-input_title"> Email</div>
+                <input class="appoitment_popup-input " type="text" name="user[email]" id="appointment_email">
+            </div>
+            <div class="appoitment_popup-form" id="appoitment_popup_f-3">
+                <div class="appoitment_popup-input_title"> Phone (optional)</div>
+                <input class="appoitment_popup-input " type="telephone" name="user[phone]" id="appointment_phone">
+            </div>
+            <div class="appoitment_popup-form" id="appoitment_popup_f-4">
+                <div class="appoitment_popup-input_title"> Total kWh used</div>
+                <input class="appoitment_popup-input" type="text" name="user[kwh]" id="appointment_kwh">
+            </div>
+            <div class="appoitment_popup-form" id="appoitment_popup_f-5">
+                <select class="appoitment_popup-input appoitment_popup_select">
+                    <option>Choose selector</option> 
+                </select>
+            </div>
+        </div> 
+            <div class="appoitment_popup_button-section">
+                <div class="appoitment_popup-button-wrapper">
+                    <span class="appoitment_popup-button"  id="appoitment_send" onclick="val_popup();">send</span> 
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <div class="succsess_popup_container" id="succsess_popup_text">
+        <div class="succsess_popup_title">
+            Dear Sir/Madame,
+        </div>
+        <div class="succsess_popup_body">
+            Thanks for your interest in making an appointment, 
+            we will contact you on the provided contact details to further understand your requirements.
+        </div>
+        <div class="succsess_popup_regards">
+            Kind regards,
+        </div>
+        <div class="succsess_popup_regards_2">
+            Sales Team,<br>
+            Global Green Buildings
+        </div>
+    </div>
+</div>
+                    
+                </div>
+
+
+
+    <div class="l-section">
+        <div class="l-grid">
+            <div class="c-title--section"><span class="c-title--section__span">Testimonials</span></div>
+
+            <div class="l-row c-reviews__wrap">
+                <div class="l-col l-col--slice-pt min-0--12 min-990--6">
+                    <div class="c-reviews">
+                        <div class="c-reviews__avatar">
+                            <div class="c-reviews__img"><img class="reviews_img" src="./images/team/x.jpg" alt="image"></div>
+                            <div class="c-reviews__name">Debuut BV</div>
+                        </div>
+                        <div class="c-reviews__text">During our trial period of 6 month we saw a significant reduction in energy consumption (12,7%) and were actually surprised that after installing the voltage optimisation unit our replacements of lightbulbs reduced with 80%.</div>
+                    </div>
+                </div>
+                <div class="l-col l-col--slice-pt min-0--12 min-990--6">
+                    <div class="c-reviews c-reviews--last">
+                        <div class="c-reviews__avatar">
+                            <div class="c-reviews__img"><img class="reviews_img" src="./images/team/x.jpg" alt="image"></div>
+                            <div class="c-reviews__name">Vindicat</div>
+                        </div>
+                        <div class="c-reviews__text">We really appreciate the way how Global Green Buildings provided us with information on their solutions. Due to their clear approach and extensive support, we installed a 144 kVA voltage optimisation unit with Unica.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <div class="l-section">
+        <div class="l-grid">
+            <div class="c-title--section"><span class="c-title--section__span">Our partners</span></div>
+            <div class="c-partner__wrap">
+                    <div class="l-row">
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img id="partners_powerstar" src="img/logo-1.png" alt="powerstar"></a>
+                        </div>
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img id="partners_jabil" src="img/partners/jabil-logo.png" alt="jabil"></a>
+                        </div>
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img id="partners_debuut" src="img/partners/logo-debuut-lila-DEF-RGB.png" alt="debuut"></a>
+                        </div>
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img id="partners_vindicat" src="img/partners/vindicat-logo-white.png" alt="vindicat"></a>
+                        </div>
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img id="partners_unica" src="img/logo-5.png" alt="unica"></a>
+                        </div>
+                        <div class="l-col min-0--4 min-480--4 min-990--2">
+                            <a class="c-partner" href="javascript:void(0);" target="_blank"><img src="img/partners/share_image.png" alt="Albert Hejn"></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div> 
+    <div class="chat_box tooltip" id="chat">
+        <!--<span class="tooltiptext">Ask a question</span>-->
+        <span><img class="chat_box_img" src="img/134918.svg" width="150" height="150px"></span>
+        <!--<span onclick="openbox();return false;">-->
+        </div> 
+    
+</main>
+<div id="popup_chat_box">
+    <div class="popup_top_text"> we are online </div>
+    <span class="popup_close icon-font icon-cancel" id="close_chat" ></span> 
+    <div id="succsess_mail"> 
+        <div id="succsess_mail_text">
+            <h2 id="popup_chat_box_h2">Hi, we are here to assist you and will respond to your question as soon as possible </h2><br>
+        </div>
+        <div id="underneath_text">
+            <h2 id="popup_chat_box_h2">Regards,<br>Global Green Buildings</h2>  
+
+        </div>              
+    </div>
+    <div class="popup_content" id="popup_content"> 
+        <div class="popup_email">
+            <input class="default-input" placeholder="EMAIL" name="email" type="email" id="popup_email" required />  
+            <!--  <input  type="email" required/>       -->  
+            <h2 id='result'></h2>
+        </div>
+        <div class="popup_comment" id="popup_comment">
+            <textarea placeholder="Hi there, I'm Global Green Buildings Chatbox and here to support you. How can I help you?" class="popup_text-area"></textarea>
+        </div>
+
+        <div class="popup_send_button"> 
+            <span class="c-button__inner popup_send" id='validate' >SEND </span>                
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <footer class="footer" id="segment_footer">
+        <div class="footer-block">
+            <div class="l-col min-0--12">
+                    <!--
+                    <div class="footer_divs"> 
+                        <div class="footer_text"><a class="footer_a" href="legal.html#privacy_policy">Privacy policy </a><span class="foter_slash"> |</span></div>
+                        <div class="footer_text"><a class="footer_a" href="legal.html#disclaimer">Disclaimer</a> </div>
+                    </div>
+                -->   
+                <div class="footer__contacts">
+                    <ul class="contact-links">
+                        <li><span class="icon-phone-1"></span>+31(0)654306326</li>
+                        <li><a href="mailto:info@globalgreenbuildings.com"><span class="icon-mail-2"></span> info@globalgreenbuildings.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-col min-0--12">
+                <div class="footer__copyright">© Global Green Investment Group, 2017</div>
+            </div>
+                <ul class="social-links">
+                  <!--<li><a class="icon-twitter" href="http://twitter.com" target="_blank"></a></li>-->
+                  <li><a class="icon-facebook" href="https://www.facebook.com/globalgreeninvestmentgroup/" target="_blank"></a></li>
+              </ul>                                   
+      </div>
+  </footer>
+
+
+  
+
+
+<div class="c-modal c-modal--700" id="c-modal__more">
+    <div class="c-modal__wrap">
+        <div class="c-modal__content">
+            <div class="c-modal__close"><svg class="icon icon--close"><use xlink:href="#icon--close"></use></svg></div>
+
+            <form class="c-form">
+                <div class="l-grid l-grid--no-spaces">
+                    <div class="c-form__row">
+                        <div class="c-form__title">More info</div>
+                    </div>
+                    <div class="l-row" id="modal_total">
+                        <div class="l-col min-0--12 min-768--6">
+                            <label class="c-checkbox" id="first_chek_box">
+                                <input class="c-checkbox__input" type="checkbox" name="test" id="id_0" onchange="check()">
+                                <span  class="c-checkbox__title">Monitoring <span>5</span><span>%</span></span>
+                                <span  class="c-checkbox__icon"><svg class="icon icon--checkbox"><use xlink:href="#icon--checkbox"></use></svg></span>
+                            </label>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <label class="c-checkbox" id="second_chek_box">
+                                <input class="c-checkbox__input" type="checkbox" name="test" id="id_1" onchange="check()">
+                                <span  class="c-checkbox__title">quick wins <span>6%</span></span>
+                                <span  class="c-checkbox__icon"><svg class="icon icon--checkbox"><use xlink:href="#icon--checkbox"></use></svg></span>
+                            </label>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <label class="c-checkbox" id="third_chek_box">
+                                <input class="c-checkbox__input" type="checkbox" name="test" id="id_2" onchange="check()">
+                                <span  class="c-checkbox__title">VO-systems <span>8%</span></span>
+                                <span  class="c-checkbox__icon"><svg class="icon icon--checkbox"><use xlink:href="#icon--checkbox"></use></svg></span>
+                            </label>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <label class="c-checkbox" id="four_chek_box">
+                                <input class="c-checkbox__input" type="checkbox" name="test" id="id_3" onchange="check()">
+                                <span  class="c-checkbox__title">Batteries <span>6%</span></span>
+                                <span  class="c-checkbox__icon"><svg class="icon icon--checkbox"><use xlink:href="#icon--checkbox"></use></svg></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="l-row">
+                        <div class="l-col min-0--12">
+                            <div class="c-form__total">Total expected savings: <span id="total_result">0%</span></div>
+                        </div>
+                    </div>
+
+                    <div class="l-row">
+                        <div class="l-col min-0--12 min-768--6">
+                            <input class="c-form__input" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <input class="c-form__input" type="text" placeholder="Surname" required>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <input class="c-form__input" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="l-col min-0--12 min-768--6">
+                            <input class="c-form__input" type="text" placeholder="Phone" required>
+                        </div>
+                        <div class="l-col min-0--12">
+                            <textarea class="c-form__textarea" placeholder="Comments" required></textarea>
+                        </div>
+                    </div>
+                    <div class="c-form__row flex--justify-center">
+                        <button class="c-button" type="submit">
+                            <span class="c-button__inner" id="submit_button_segment">Submit</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<div class="popup"
+id="login_popup"
+data-jscomp="components/sendFormPopup"
+data-jscomp-config='{"url": "/users/password", "showSignInPopup": true}'>
+
+<div class="fog"></div>
+<div class="popup-body">
+    <span id="popup_close" class="popup-close icon-font icon-cancel" onclick="open_popup()"></span>
+
+    <div class="popup-title">my building</div>
+    <div class="popup-login"><p class="default-text-login">Login</p> </div>
+    <div class="popup-content">
+
+      <form data-jscomp="components/validator" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="mqpzeNHiBaZewik9zVYmPtJUCxz6iiENoVezNlWzYGtxpdpBIW35uwCGsMx96VVLSPM1mR0JVdpayJ1d9EzaFw==" />
+        <div class="message-box"></div>
+        <div class="field">
+          <input autofocus="autofocus" i class="default-input popup_input" placeholder="username" required="required" type="email" name="user[email]"  />
+      </div>
+
+      <div class="field">
+          <input autofocus="autofocus"   class="default-input popup_input" placeholder="password" required="required" type="password" name="user[email]" />
+      </div>
+      <div id="forgot-password" class="field forgot-link"> 
+        <a > Forgot your password?</a>
+    </div>
+    <button type="button" id="popup_button" class="default-btn primary-btn">Send</button>
+</form>
+
+<div class="popup-additional">
+    <p class="default-text">I want to explore</p>
+    <a onclick="open_popup()" href="index.html#segments">My segment</a>
+    <p class="default-text"></p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="appoitment_popup_back" id="popup_back"></div> 
+
+
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'> 
+
+<script data-main="js/main" src="js/require.js"></script>
+<!--<script type="text/javascript" src="js/components/anchor_to_segment_slides.js"></script>-->
+<!-- <script type="text/javascript" src="js/components/chatbox.js"></script>-->
+<!--<script type="text/javascript" src="js/components/ChatBox_sendMessage.js"></script>-->
+<script type="text/javascript" src="js/components/ESC_button-event.js"></script>
+<script type="text/javascript" src="js/components/mobile_menu.js"></script>
+<script type="text/javascript" src="js/components/popup_menu.js"></script>
+<script type="text/javascript" src="js/components/anchor.js"></script>
+<script type="text/javascript" src="js/scripts_old.js"></script>
+<script type="text/javascript" src="js/components/_popup.js"></script>
+</body>
+</html>

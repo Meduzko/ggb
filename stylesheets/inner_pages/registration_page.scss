@@ -1,0 +1,112 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.registration-page {
+    margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+
+    .inner-page-main-title {
+        text-align: center;
+        width: 100%;
+    }
+
+    .default-text {
+        padding-top: 35px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    form {
+        .field, #error_explanation {
+            margin: 35px auto;
+            padding: 0 15px 25px 0;
+            position: relative;
+            width: 630px;
+            select {
+                //display: none;
+            }
+            span.icon-ok {
+                color: $blue-green;
+                font-family: icon_font;
+                font-size: 22px;
+                display: none;
+                position: absolute;
+                bottom: 45px;
+                right: -10px;
+            }
+            .field_with_errors {
+                display: inline-block;
+            }
+        }
+        .default-label {
+            text-align: left;
+            width: 235px;
+        }
+        .default-input {
+            width: 325px;
+
+            &.valid + span, &.valid + label + span {
+                display: inline-block;
+            }
+        }
+
+        .actions {
+            text-align: center;
+        }
+        .default-btn {
+            padding: 16px 120px;
+        }
+        hr {
+            margin: 60px 0;
+        }
+        label.error {
+            display: block;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 12px 20px 0 0;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        #error_explanation {
+            color: $red;
+            margin-top: 0;
+            h2, li {
+                font-weight: bold;
+                font-size: 12px;
+                padding-top: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.profile-page {
+        padding-top: 240px;
+        .default-text {
+            padding-bottom: 0;
+        }
+        .inner-page-main-title {
+            position: absolute;
+            left: 0;
+            top: -160px;
+            text-align: center;
+            width: 100%;
+        }
+        .top-default-text {
+            display: none;
+            padding: 30px 0 60px;
+            position: absolute;
+            top: -90px;
+            left: 0;
+            text-align: center;
+            width: 100%;
+        }
+        .r-tabs-state-active {
+            .top-default-text {
+                display: block;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+	<meta name="description" content="Contact Global Green Buildings for questions or suggestions.">
+	<meta name="keywords" content="Global Green Buildings Contact">
+	<meta name="description" content="">
+   	<meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" media="all" href="css/GGEI.css" />
+    <link rel="stylesheet" media="all" href="css/iconselect.css" />	
+</head>
+<body>
+    <header class="header"> 
+      <div class="header_block">
+           <nav>
+            <div class="header_icons">
+                <div class="mob_menu" id="menu_control">
+                    <img src="img/menu_icon.png" id="menu_img" onclick="change()">
+                </div>
+                <div class="buildngs_menu" id="menu_control_2">
+                    <img src="img/Buildings_icons_2.png" id="buildings_img" alt="mobile buildings-icon">
+                    <a class="buildings_text">my building</a> 
+                </div>
+            </div>
+
+            <div class="div-site-links">    
+                <ul class="site-links" id="site-links">
+                  <li class="header-menu-li"><a class="header-menu-a" href="idea.html">IDEA</a></li>
+                  <li class="header-menu-li"><a class="header-menu-a" href="index.html#service_carousel">services</a></li>
+                  <li class="header-menu-li"><a class="header-menu-a" href="about.html">ABOUT</a></li>
+                  <li class="header-menu-li"><a class="header-menu-a" href="contact.html">CONTACT</a></li>
+              </ul>
+        <!--    <span class="menu_control icon-menu menu-control"  value="View_menu" href="#" id="menu_control" ></span>
+                <span class="menu_control_2 icon-user  auth-menu-control"  value="View_login" href="#" id="menu_control_2"></span>
+        -->
+          </div>
+          <div class="my_buildings">
+            <ul class="auth-links" id="menu_control-auth" >
+                <li class="login-link"><a onclick="open_popup()" class="header-menu-login-a" >my building</a></li>      
+            </ul>
+          </div>
+
+          
+        </nav>
+        </div>
+        <div class="logo">
+          <a href="index.html"></a>
+          <!--<object data="img/1.png"  type="image/png+xml">
+            <img class="logo_img" src="img/1.png" />
+        </object> -->
+        <span><i></i></span>
+    </div>
+</header>
+<div class="contact_page_wrapper">
+
+              <div class="chat_box tooltip">
+                    <!--<span class="tooltiptext">Ask a question</span>-->
+                    <span onclick="openbox();return false;"><img class="chat_box_img" src="img/134918.svg" width="150" height="150px"></span>
+                </div> 
+
+<div class="inner-page contact-page" id="contact" data-jscomp="components/contact">
+  <h1 class="inner-page-main-title">Contact</h1>
+
+  <p class="default-text top-default-text">We are happy to answer all your questions, or hear any suggestions that you might have.</p>
+
+  <form action="/contact" method="POST" data-jscomp='components/validator'>
+
+    <div class="message-box"></div>
+
+    <div class="field">
+      <div class="default-label">
+        <label for="contact-email" id="contact_page_email">Email</label>
+      </div>
+      <input type="text"
+             id="contact-email"
+             class="default-input"
+             placeholder="example@mail.com"
+             name="contact[email]"
+             data-validator-email="Please write correct email"
+             data-validator-required="This field is required" />
+      <span class="icon-ok">&nbsp;</span>
+    </div>
+
+    <div class="field">
+      <div class="default-label">
+        <label for="contact-message">Question</label>
+      </div>
+      <textarea id="contact-message"
+                class="default-input"
+                name="contact[body]"
+                placeholder="Message"
+                data-validator-required="This field is required" ></textarea>
+      <span class="icon-ok">&nbsp;</span>
+    </div>
+
+    <div class="actions">
+      <input class='default-btn primary-btn'
+             type="button"
+             value="Send"
+             id="contact_button"
+             />
+    </div>
+
+  </form>
+
+  <section class="contact-data">
+    <div>
+      <span class="icon-phone-1"></span>
+      +31 65 430 63 26
+    </div>
+    <div>
+      <a href="mailto:info@globalgreenbuildings.com">
+        <span class="icon-mail-2"></span>
+        info@globalgreenbuildings.com
+      </a>
+    </div>
+  </section>
+
+
+</div>
+
+<footer>
+  <div class="footer-block">
+    <ul class="contact-links">
+      <li><span class="icon-phone-1"></span>+31 65 430 63 26</li>
+      <li><a href="mailto:info@globalgreenbuildings.com"><span class="icon-mail-2"></span>info@globalgreenbuildings.com</a></li>
+    </ul>
+    <small>© Global Green Investment Group, 2017</small>
+    <ul class="social-links">
+      <!--<li><a class="icon-twitter" href="http://twitter.com" target="_blank"></a></li>-->
+      <li><a class="icon-facebook" href="https://www.facebook.com/globalgreeninvestmentgroup/" target="_blank"></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+            <div id="popup_chat_box">
+                <div class="popup_top_text"> we are online </div>
+                <span class="popup_close icon-font icon-cancel" onclick="openbox()" ></span> 
+                <div id="succsess_mail"> 
+                    <div id="succsess_mail_text">
+                    <h2 id="popup_chat_box_h2">Hi, we are here to assist you and will respond to your question as soon as possible </h2><br>
+                    </div>
+                    <div id="underneath_text">
+                    <h2 id="popup_chat_box_h2">Regards,<br>Global Green Buildings</h2>  
+                     
+                    </div>              
+                </div>
+                <div class="popup_content" id="popup_content"> 
+                    <div class="popup_email">
+                        <input class="popup_email_input" placeholder="EMAIL" name="email" type="email" id="popup_email" required />  
+                       <!--  <input  type="email" required/>       -->  
+                       <h2 id='result'></h2>
+                    </div>
+                    <div class="popup_comment" id="popup_comment">
+                        <textarea placeholder="Hi there, I'm Global Green Buildings Chatbox and here to support you. How can I help you?" class="popup_text-area"></textarea>
+                    </div>
+
+                    <div class="popup_send_button"> 
+                        <span class="c-button__inner popup_send" id='validate' >SEND </span>                
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+<div class="popup"
+     id="login_popup"
+     data-jscomp="components/sendFormPopup"
+     data-jscomp-config='{"url": "/users/password", "showSignInPopup": true}'>
+
+  <div class="fog" onclick="compSupport.callFunc(this, 'hide')"></div>
+  <div class="popup-body">
+    <span id="popup_close" class="popup-close icon-font icon-cancel" onclick="open_popup()"></span>
+
+    <div class="popup-title">my building</div>
+     <div class="popup-login"><p class="default-text-login">Login</p> </div>
+    <div class="popup-content">
+
+      <form data-jscomp="components/validator" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="mqpzeNHiBaZewik9zVYmPtJUCxz6iiENoVezNlWzYGtxpdpBIW35uwCGsMx96VVLSPM1mR0JVdpayJ1d9EzaFw==" />
+        <div class="message-box"></div>
+        <div class="field">
+          <input autofocus="autofocus"  class="default-input popup_input" placeholder="username" required="required" type="email" name="user[email]" />
+        </div>
+
+        <div class="field">
+          <input autofocus="autofocus"  class="default-input popup_input" placeholder="password" required="required" type="password" name="user[email]" />
+        </div>
+        <div id="forgot-password" class="field forgot-link"> 
+        <a > Forgot your password?</a>
+        </div>
+        <button type="button" id="popup_button" class="default-btn primary-btn" onclick="compSupport.callFunc('#forgotPassPopup', 'sendForm')">Send</button>
+</form>
+
+      <div class="popup-additional">
+        <p class="default-text">I want to explore</p>
+        <a onclick="open_popup()" href="index.html#segments">My segment</a>
+        <p class="default-text"></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- Font can be found here - http://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:300,400,900 -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+            <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+            <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+             <script type="text/javascript" src="js/swiper.js"></script>
+            <script type="text/javascript" src="js/components/block-carousel.js"></script>
+            <script type="text/javascript" src="js/components/c-finance_carousel.js"></script>
+            <script type="text/javascript" src="js/components/chatbox.js"></script>
+            <script type="text/javascript" src="js/components/ChatBox_sendMessage.js"></script>
+            <script type="text/javascript" src="js/components/ESC_button-event.js"></script>
+            <script type="text/javascript" src="js/components/home-slider.js"></script>
+            <script type="text/javascript" src="js/components/mobile_menu.js"></script>
+            <script type="text/javascript" src="js/components/popup_menu.js"></script>
+            <script type="text/javascript" src="js/components/send_message_contact-page.js"></script>
+            <script type="text/javascript" src="js/scripts_old.js"></script>
+
+
+
+
+<script>
+  
+    document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+    } else {
+        isEscape = (evt.keyCode == 27);
+    }
+    if (isEscape) {
+        document.getElementById("login_popup").style.display = 'none';
+    }
+};
+
+</script>
+</body>
+</html>

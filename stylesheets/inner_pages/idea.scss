@@ -1,0 +1,310 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.idea-page {
+    .separator-with-text {
+        margin: 80px auto 0;
+        width: 1500px;
+    }
+    .inner-page-main-title {
+        padding-bottom: 25px;
+    }
+    .top-default-text {
+        text-align: center;
+    }
+    .idea-main-image {
+        margin: 0 auto;
+        max-width: 1260px;
+        text-align: center;
+        img {
+            margin-top: 50px;
+            width: 100%;
+        }
+    }
+    .project-infographic-content {
+        border-top: 1px solid $light-grey2;
+        padding-top: 95px;
+        margin: 0 auto;
+        margin-top: 65px;
+        max-width: 1260px;
+        > div {
+            display: inline-block;
+            padding: 0 6%;
+            vertical-align: top;
+            width: 37%;
+            > div {
+                padding-bottom: 70px;
+            }
+            p {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .how-it-works-video {
+        max-width: 1500px;
+        margin: 80px auto 100px;
+        position: relative;
+        text-align: center;
+
+        video {
+            width: 100%;
+        }
+
+        .video-controls {
+
+            background: $black;
+            opacity: 0.8;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+
+            h2 {
+                color: $white;
+                margin-top: -120px;
+                position: absolute;
+                top: 50%;
+                text-align: center;
+                width: 100%;
+            }
+
+            div {
+                color: $white;
+                margin-top: 80px;
+                position: absolute;
+                top: 50%;
+                text-align: center;
+                width: 100%;
+            }
+
+            .play-pause {
+                background-color: $blue-green;
+                color: $white;
+                cursor: pointer;
+                display: block;
+                font-size: 42px;
+                line-height: 104px;
+                height: 104px;
+                margin: -52px 0 0 -52px;
+                opacity: 1;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 104px;
+                @include border-radius(52px);
+                @include transition(opacity 0.5s ease-in-out, opacity 0.5s ease-in-out);
+                &:before {
+                    margin-left: 18px;
+                }
+                &:hover {
+                    background-color: $blue-green-hover;
+                }
+            }
+
+        }
+
+        &.playing {
+            .video-controls {
+                background: none;
+                h2, div {
+                    display: none;
+                }
+            }
+            .play-pause {
+                opacity: 0;
+                &:before {
+                    margin-left: 8px;
+                    content: '\e813';
+                }
+            }
+            &:hover {
+                .play-pause {
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+    .steps-to-invest {
+        margin: 0 auto;
+        max-width: 1260px;
+        position: relative;
+
+        .inside-step {
+            display: none;
+            background-color: $white;
+            color: $blue-green;
+            font-size: 18px;
+            font-weight: bold;
+            height: 33px;
+            padding-top: 17px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin: -25px 0 0 -25px;
+            text-align: center;
+            width: 50px;
+            @include box-shadow(0, 0, 24px, rgba(0, 0, 0, 0.15));
+            @include border-radius(25px);
+        }
+
+        .steps-line {
+            left: 50%;
+            margin-left: -25px;
+            position: absolute;
+            top: 180px;
+            text-align: center;
+            width: 50px;
+            div {
+                background-color: $white;
+                color: $blue-green;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                height: 33px;
+                padding-top: 17px;
+                text-align: center;
+                width: 50px;
+                @include box-shadow(0, 0, 24px, rgba(0, 0, 0, 0.15));
+                @include border-radius(25px);
+            }
+            span {
+                background: $light-grey2;
+                display: block;
+                margin: 10px auto;
+                width: 5px;
+                @include border-radius(3px);
+                &:nth-child(2) {
+                    min-height: 188px;
+                }
+                &:nth-child(4) {
+                    min-height: 156px;
+                }
+                &:nth-child(6) {
+                    min-height: 136px;
+                }
+            }
+        }
+
+        ul {
+            padding-top: 80px;
+            li {
+                border-top: 1px solid $light-grey2;
+                padding: 50px 0;
+                position: relative;
+                text-align: right;
+
+                &:after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+                div {
+                    left: 22%;
+                    position: relative;
+                    width: 275px;
+                }
+                h5 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding-bottom: 35px;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: 14px;
+                    color: $light-grey1;
+                }
+                &:nth-child(2), &:nth-child(4) {
+                    div {
+                        float: right;
+                        left: auto;
+                        right: 22%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1260px) {
+    .idea-page {
+        .steps-to-invest {
+            ul {
+                li {
+                    div {
+                        left: 16%;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        div {
+                            right: 16%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .idea-page {
+        .steps-to-invest {
+            ul {
+                li {
+                    div {
+                        left: 9%;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        div {
+                            right: 9%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .idea-page {
+
+        .project-infographic-content {
+            > div {
+                width: 88%;
+                p.default-text {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+
+        .steps-to-invest {
+            .inside-step {
+                display: block;
+            }
+            .steps-line {
+                display: none;
+            }
+            ul {
+                li {
+                    div {
+                        left: auto;
+                        padding: 0 30px;
+                        text-align: center;
+                        width: auto;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        div {
+                            right: auto;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

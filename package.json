@@ -1,0 +1,27 @@
+{
+  "name": "ggb",
+  "version": "1.0.0",
+  "description": "ggb proj",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "watch": "webpack --watch"
+  },
+  "author": "Sasha",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "email-node": "^1.0.1",
+    "express": "^4.15.3",
+    "express-sitemap": "^1.8.0",
+    "ngx-siema": "^2.0.1",
+    "nodemailer": "^4.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "webpack": "^4.0.0-beta.0",
+    "webpack-cli": "^2.0.4"
+  }
+}

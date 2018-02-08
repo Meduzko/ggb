@@ -1,0 +1,65 @@
+/* c-checkbox
+------------------------------------------------------------------- */
+.c-checkbox {
+    .var () { @root: ~'.c-checkbox';}.var;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    z-index: 1;
+    position: relative;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &__icon {
+        order: -1;
+        padding: 2px;
+        min-width: 26px;
+        max-width: 26px;
+        min-height: 26px;
+        max-height: 26px;
+        margin-right: 16px;
+        position: relative;
+        background: @color-1;
+        color: transparent;
+        border-radius: 5px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+        .icon {
+            .center-absolute();
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked ~ @{root}__icon {
+            color: @color-8;
+        }
+
+        &:checked ~ @{root}__title span {
+            color: @color-8;
+        }
+    }
+
+    &[disabled] {
+        opacity: .65;
+        pointer-events: none;
+    }
+
+    &--inline {
+        display: inline-flex;
+        margin-right: 12px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

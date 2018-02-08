@@ -1,0 +1,57 @@
+@import "../partials/variables";
+@import "../partials/variables";
+
+.subscription {
+    h2 {
+        font-size: 48px;
+        padding: 0 10% 35px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    form {
+        padding: 0 50px 36px;
+        position: relative;
+        text-align: center;
+        .default-btn {
+            margin: 30px auto 0;
+            padding: 16px 90px;
+        }
+    }
+    p {
+        padding-bottom: 65px;
+    }
+    .default-text {
+        text-align: center;
+    }
+    .updating-layer {
+        background: rgba(0, 0, 0, 0.3);
+        color: $white;
+        display: none;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        object {
+            position: absolute;
+            top: 92px;
+        }
+
+    }
+    .message-box {
+        padding-bottom: 20px;
+        .success-msg {
+            color: $green;
+        }
+        .error-msg {
+            color: $red;
+        }
+    }
+}
+
+.subscription-message {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 28px !important;
+}

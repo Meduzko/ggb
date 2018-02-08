@@ -1,0 +1,19 @@
+/* c-partner
+------------------------------------------------------------------- */
+.c-partner {
+    .var () { @root: ~'.c-partner'; }.var;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+
+    &__wrap {
+        padding-top: 40px;
+
+        @media @min-768 {
+            padding: 40px 0 50px 0;
+            border-bottom: 1px solid @color-7;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+header {
+
+    background-color: $white;
+
+    @include box-shadow(0, 0, 10px, rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: 999;
+
+
+    .header-block {
+        height: 93px;
+        margin: 0 auto;
+        max-width: 1600px;
+        position: relative;
+        z-index: 10;
+    }
+
+    object {
+        pointer-events: none;
+    }
+
+    nav {
+        display: inline-block;
+        height: 93px;
+
+        .menu-control {
+            cursor: pointer;
+            display: none;
+            font: normal 28px icon_font;
+        }
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            a, span {
+                border-top: 4px solid transparent;
+                display: inline-block;
+                color: $grey;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 900;
+                line-height: 86px;
+                height: 89px;
+                padding: 0 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                @include transition(border-color 0.3s ease-in-out, color 0.3s ease-in-out);
+                &:hover {
+                    border-color: $blue;
+                    color: $blue;
+                }
+            }
+            &.active a, &.active span {
+                border-top: 4px solid $blue;
+                color: $blue;
+            }
+        }
+        .site-links {
+            padding-left: 20px;
+        }
+        .auth-links {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding-right: 20px;
+            li {
+                a {
+                    color: $blue-green;
+                    &:before {
+                        color: $light-grey9;
+                        font-size: 15px;
+                        position: relative;
+                        top: -2px;
+                        left: -8px;
+                    }
+                    &:hover {
+                        border-color: $blue-green !important;
+                    }
+                }
+            }
+            li.login-link span {
+                color: $blue-green;
+                &:hover {
+                    border-color: $blue-green;
+                    color: $blue-green;
+                }
+            }
+        }
+    }
+
+    .logo {
+        height: 112px;
+        margin-left: -104px;
+        position: absolute;
+        left: 50%;
+        top: 14px;
+        width: 207px;
+        a {
+            display: block;
+            height: 126px;
+            position: absolute;
+            width: 207px;
+            z-index: 11;
+        }
+        object {
+            position: relative;
+            z-index: 10;
+        }
+        span {
+            display: block;
+            margin-left: -75px;
+            position: absolute;
+            top: 79px;
+            left: 50%;
+            height: 55px;
+            width: 186px;
+            overflow: hidden;
+
+            i {
+                background: $white;
+                display: block;
+                top: -141px;
+                position: absolute;
+                height: 188px;
+                width: 150px;
+                @include border-radius(93px);
+                @include box-shadow(0, 0, 10px, rgba(0, 0, 0, 0.5));
+            }
+        }
+
+    }
+
+}

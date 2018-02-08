@@ -1,0 +1,99 @@
+/* c-select
+------------------------------------------------------------------- */
+.c-select {
+    .var () { @root: ~'.c-select'; }.var;
+    width: 100%;
+    position: relative;
+
+    @media (min-width: 768px) {
+        max-width: 252px;
+    }
+
+    &__selected {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 36px;
+        cursor: pointer;
+        border: 1px solid #cccccc;
+    }
+
+    &__value {
+        max-width: 100%;
+        width: calc(~ '100% - 36px');
+        padding: 0 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .icon {
+            vertical-align: sub;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 100%;
+        background: #cccccc;
+
+        .icon {
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    &__dropdown {
+        left: 0;
+        top: 100%;
+        z-index: 9;
+        width: 100%;
+        margin-top: -1px;
+        overflow: hidden;
+        position: absolute;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        box-shadow: 0 6px 6px rgba(0,0,0,.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        transform-origin: top left;
+        transition: all .3s ease-in-out;
+    }
+
+    &__scroll {
+        overflow: auto;
+        max-height: 150px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        font-size: 13px;
+        cursor: pointer;
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        &:hover {
+            background: #cccccc;
+        }
+    }
+
+    &--open {
+
+        @{root}__icon .icon {
+            transform: rotate(180deg);
+        }
+
+        @{root}__dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: scaleY(1);
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.about-page {
+    margin: 0 auto;
+    max-width: 1260px;
+    padding-top: 170px;
+    .inner-page-main-title {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        text-align: center;
+        width: 100%;
+    }
+    .default-text {
+        padding: 30px 20% 60px;
+    }
+    .team-tab {
+        ul {
+            padding-top: 70px;
+            text-align: center;
+
+            li {
+                background-color: $white;
+                display: inline-block;
+                left: 50%;
+                margin: 20px 30px 30px;
+                min-height: 417px;
+                padding: 75px 60px 70px;
+                text-align: center;
+                vertical-align: top;
+                width: 222px;
+                @include box-shadow(0, 0, 10px, rgba(0, 0, 0, .16));
+
+                .team-img {
+                    display: inline-block;
+                    height: 160px;
+                    overflow: hidden;
+                    width: 160px;
+                    @include background-gradient($blue, $blue-green);
+                    @include border-radius(80px);
+                    div {
+                        background-color: $white;
+                        height: 156px;
+                        margin: 2px 0 0 2px;
+                        width: 156px;
+                        @include border-radius(77px);
+                    }
+                    img {
+                        margin-top: 2px;
+                        height: 152px;
+                        width: 152px;
+                        @include border-radius(76px);
+                    }
+                }
+
+                h5 {
+                    font-size: 24px;
+                    margin: 40px 0 30px 0;
+                    min-height: 40px;
+                }
+
+                p {
+                    color: $light-grey1;
+                    font-size: 14px;
+                    padding-top: 50px;
+                }
+
+                .team-role {
+                    color: $light-grey1;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+            }
+            &.team-support {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .infographics-tab {
+        h5 {
+            padding: 0 0 10px 0;
+        }
+        ul {
+            padding: 30px 100px 50px 0;
+            li span {
+                color: $blue-green;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 740px) {
+    .about-page {
+        .team-tab {
+            ul {
+                li {
+                    margin: 0 30px 20px;
+                    padding: 35px 20px 40px;
+                    width: 200px;
+                }
+                &.founders {
+                    li {
+                        margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

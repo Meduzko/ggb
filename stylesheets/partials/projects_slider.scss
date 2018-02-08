@@ -1,0 +1,144 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.projects-slider {
+
+    margin: -163px auto 0;
+    position: relative;
+    width: 1500px;
+
+    .default-text {
+        margin-bottom: 30px;
+    }
+
+    .swiper-slide {
+        height: 732px;
+        background-position: 50% 50%;
+    }
+
+    .slider-content, .project-block {
+        background-color: $white;
+        margin: 58px auto 0;
+        height: 546px;
+        left: 50%;
+        padding: 1px 50px 70px;
+        text-align: center;
+        width: 242px;
+        @include box-shadow(0, 0, 10px, rgba(0, 0, 0, .16));
+        h4 {
+            font-size: 24px;
+            line-height: 29px;
+            span {
+                background: url('/images/marker.png') no-repeat;
+                display: block;
+                height: 65px;
+                margin: 37px 0 24px 95px;
+                padding: 13px 0 0 12px;
+                width: 102px;
+                i {
+                    background-repeat: no-repeat;
+                    display: block;
+                    height: 23px;
+                    width: 25px;
+                    &.sun-icon {
+                        background-image: url('/images/sun_icon.png');
+                    }
+                    &.wind-icon {
+                        background-image: url('/images/wind_icon.png');
+                        background-position: 2px 0;
+                    }
+                    &.bio-icon {
+                        background-image: url('/images/bio_icon.png');
+                        background-position: 5px 0;
+                    }
+                }
+            }
+        }
+        p {
+            color: $light-grey1;
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 22px;
+        }
+        .project-location {
+            color: $light-grey1;
+            font-size: 12px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        .project-statistic {
+            background: $light-grey5;
+            display: inline-block;
+            font-size: 24px;
+            height: 92px;
+            margin: 10px 10px 35px;
+            position: relative;
+            text-align: center;
+            width: 92px;
+            @include border-radius(46px);
+            span {
+
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                position: absolute;
+                text-align: center;
+                top: 30px;
+                width: 92px;
+                i {
+                    color: $blue-green;
+                    display: block;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-style: normal;
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .project-price {
+            color: $blue;
+            font-size: 48px;
+            margin: 20px 0 13px 0;
+            white-space: nowrap;
+            sup {
+                font-size: 25px;
+                vertical-align: top;
+            }
+            span {
+                color: $blue-green;
+                display: block;
+                font-size: 14px;
+                padding: 6px 0;
+                margin: 10px 0 4px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        top: 57%;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination {
+        bottom: 9%;
+    }
+
+    .swiper-pagination-bullet {
+        background: $light-grey4;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        height: 10px;
+        margin: 0 5px;
+        text-indent: -99999px;
+        width: 10px;
+        @include border-radius(5px);
+        @include box-shadow(0, 0, 0, 0);
+        &:hover, &.swiper-pagination-bullet-active {
+            background: $blue-green;
+        }
+    }
+}
